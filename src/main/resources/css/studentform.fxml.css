@@ -1,0 +1,47 @@
+/*
+ * Empty Stylesheet file.
+ */
+
+#textArea{
+    -fx-text-align: center;
+    -fx-text-decoration: underline;
+    -fx-font-size: 18;
+    -fx-alignment: BOTTOM_LEFT;
+    -fx-padding: 20; 
+    -fx-font-weight: bold;
+    -fx-background-color: lightgray;
+
+}
+.mainFxmlClass {
+
+}
+
+.textFieldLabel{
+    -fx-padding: 10;
+    -fx-font-weight: bold;
+    -fx-underline: true;
+}
+
+.textField{
+    
+}
+
+.textAreaTop, .viewport{
+
+}
+
+.textAreaTop, .content{
+    
+}
+
+.textAreaError{
+    -fx-padding: 10;
+    -fx-text-background-color: red;
+        
+}
+
+.gridPane{
+    -fx-hgap: 10;
+    -fx-alignment:TOP_CENTER;
+    -fx-padding: 20;
+}

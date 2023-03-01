@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TreeView?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+
+<BorderPane fx:id="loginfxml" fx:controller="com.university.university.controllers.StartController" maxHeight="250.0" maxWidth="560.0" minHeight="300.0" minWidth="599.0" prefHeight="250.0" prefWidth="559.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1">
+<!-- BOTTOM -->
+<bottom>
+	<HBox alignment="bottom_right" spacing="10">
+		<padding>
+			<Insets bottom="10" right="10" />
+		</padding>
+		<Button fx:id="addButton" prefWidth="90" text="Add" onAction="#addItem" />
+		<Button fx:id="deleteHolder" prefWidth="90" text="Delete" onAction="#deleteItem" />
+		<Button fx:id="okayButton" prefWidth="90" text="Commit" onAction="#commitChanges"/>
+	</HBox> 
+</bottom>
+<left>
+<TreeView fx:id="listViewDB" editable="true" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+</TreeView>
+</left>
+<top>
+<MenuBar BorderPane.alignment="CENTER">
+  <menus>
+	<Menu mnemonicParsing="false" text="File">
+	  <items>
+		<MenuItem mnemonicParsing="false" text="Close" />
+	  </items>
+	</Menu>
+	<Menu mnemonicParsing="false" text="Edit">
+	  <items>
+		<MenuItem mnemonicParsing="false" text="Delete" />
+	  </items>
+	</Menu>
+	<Menu mnemonicParsing="false" text="Help">
+	  <items>
+		<MenuItem mnemonicParsing="false" text="About" />
+	  </items>
+	</Menu>
+  </menus>
+</MenuBar>
+</top>
+<center>
+<TableView fx:id="tableView" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+  <columns>
+
+  </columns>
+</TableView>
+</center>
+
+</BorderPane>
