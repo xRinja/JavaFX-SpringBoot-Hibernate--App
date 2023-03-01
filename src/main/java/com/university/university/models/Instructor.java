@@ -30,8 +30,7 @@ import lombok.ToString;
 @Getter
 @Setter
 @NoArgsConstructor
-@AllArgsConstructor
-@ToString(callSuper = true)
+@ToString(exclude = {"courses"})
 @Table( // To change table settings like name
     name = "instructor",
     //schema = "university",
@@ -43,7 +42,7 @@ import lombok.ToString;
     }
     ) 
 
-public class Instructor{
+public class Instructor extends Person{
     @Id // Primary keys in tables
     @Column(name = "instructor_id", nullable = false)
     @GeneratedValue(

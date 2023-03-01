@@ -35,7 +35,7 @@ import org.hibernate.annotations.Cascade;
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
-@ToString
+@ToString(exclude = {"instructor", "students"})
 @Table( // To change table settings like name
     name = "courses",
     //schema = "university",

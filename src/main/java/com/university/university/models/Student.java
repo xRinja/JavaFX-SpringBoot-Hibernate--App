@@ -31,8 +31,7 @@ import lombok.ToString;
 @Getter
 @Setter
 @NoArgsConstructor
-@AllArgsConstructor
-@ToString
+@ToString(exclude = {"courses"})
 @Table( // To change table settings like name
     name = "students",
     //schema = "university",
@@ -44,7 +43,7 @@ import lombok.ToString;
     }
     ) 
 
-public class Student implements Cloneable{
+public class Student extends Person implements Cloneable{
     @Id // Primary keys in tables
     @Column(name = "student_id", nullable = false)
     @GeneratedValue(
@@ -110,6 +109,7 @@ public class Student implements Cloneable{
         if(courses.contains(course)){
             LoggerConfig.logger.info("The set already has the course: " + course);
         } else {
+            course.getStudents().add(this);
             courses.add(course);
             LoggerConfig.logger.info("The courses " + course + " has been added");
         }

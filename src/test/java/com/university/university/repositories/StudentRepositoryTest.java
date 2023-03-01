@@ -1,5 +1,7 @@
 package com.university.university.repositories;
 
+import com.university.university.configurations.LoggerConfig;
+import com.university.university.models.Course;
 import java.time.LocalDate;
 import java.util.List;
 import java.util.Random;
@@ -18,6 +20,9 @@ public class StudentRepositoryTest {
 
     @Autowired
     private StudentRepository studentRepository;
+    
+    @Autowired
+    private CoursesRepository coursesRepository;
 
     @Test
     void saveMethod(){
@@ -32,6 +37,15 @@ public class StudentRepositoryTest {
         studentRepository.save(azeem);
         // Display
         System.out.println(azeem.getB_firstName() + azeem.getC_lastName());
+    }
+    
+    @Test
+    void addColumnToStudent(){
+        Student student = studentRepository.findById(3).get();
+        //Course course = coursesRepository.findById(1L).get();
+        //student.addCourse(course);
+        LoggerConfig.logger.info("The courses count is: " + student.getCourses().size());
+        //studentRepository.save(student);
     }
 
     @Test
